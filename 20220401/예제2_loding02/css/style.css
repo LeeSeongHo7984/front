@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #000000;
+}
+
+@keyframes spinner {
+  from {
+    transform: scale(100%, 100%);
+    } to {
+    transform: scale(200%, 200%);
+  }
+}
+
+@keyframes fadeout {
+  from {
+    transform: scale(1.6);
+    opacity: 1;
+    } to {
+      transform: scale(2.8);
+      opacity: 0;
+    }
+  }
+
+@keyframes text {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}
+
+#wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#spinner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  /* line-height: 60px;
+  text-align: center; */
+}
+
+#spinner p {
+  font-size: 12px;
+  font-style: oblique;
+  color: white;
+  animation-name: text;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#spinner div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-width: 3px;
+  border-style: solid;
+  border-color: rgba(110, 240, 50, 1);
+  border-radius: 100%;
+  opacity: 0;
+  animation-name: fadeout;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  box-shadow: 0 0 20px rgba(196, 255, 20, 1);
+}
+
+#spinner div:nth-of-type(1) {
+  border-color: #557B83;
+}
+
+#spinner div:nth-of-type(2) {
+  animation-delay: 1s;
+  border-color: #FFF56D;
+}
+
+#spinner div:nth-of-type(3) {
+  animation-delay: 2s;
+  border-color: #99FFCD;
+}
+
+#spinner div:nth-of-type(4) {
+  animation-delay: 3s;
+  border-color: #9FB4FF;
+}

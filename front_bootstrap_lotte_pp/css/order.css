@@ -1,0 +1,382 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  font-size: 16px;
+  line-height: 1.3;
+  letter-spacing: -0.05em;
+  color: #333;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+button {
+  border: 0;
+  background: none;
+  cursor:pointer;
+  outline: none;
+}
+
+div {
+  display: block;
+}
+
+/* 상단 시작 */
+
+#header {
+  display: flex;
+}
+
+#header img {
+  margin: auto;
+}
+
+.nav {
+  margin: auto;
+}
+
+.navbar-nav .nav-item .nav-link + .sub-menu {
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  font-size: 15px;
+  padding: 10px;
+  height: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s;
+  background: #f8f9fa;
+}
+
+.navbar-nav .nav-item:hover .sub-menu {
+  position: absolute;
+  display: block;
+  opacity: 1;
+  height: 100px;
+  visibility: visible;
+  transition: .5s;
+  z-index: 1;
+}
+
+.sub-menu li a {
+  color: black;
+}
+
+.navbar-brand {
+  margin: 0 5% 0 0;
+  font-weight: bold;
+  margin-left: 50px;
+}
+
+.navbar-light {
+  margin: auto;
+}
+
+.form-inline {
+  margin: auto;
+}
+
+.navbar {
+  margin: auto;
+}
+
+.navbar-nav {
+  margin: auto;
+}
+
+.nav-link {
+  margin-top: 10px;
+}
+
+.navbar-nav li {
+  padding-right: 50px;
+  padding-bottom: 10px;
+}
+
+.nav .nav-item a {
+  color: black;
+}
+
+.featurette-divider {
+  margin: 50px 0;
+  border-color: gray;
+}
+
+.lnb .page_tit h1 {
+  text-align: center;
+  font-weight: revert;
+}
+
+.container {
+    max-width: 1500px;
+    margin-top: 30px;
+}
+
+.page_tit {
+  position: static;
+}
+
+.page_tit ul {
+  display: table;
+  width: 1200px;
+  margin: 60px auto 0;
+  position: static;
+  left: 0;
+  z-index: 100;
+}
+
+.page_tit li {
+  width: 20%;
+  display: table-cell;
+  vertical-align: middle;
+  border: 1px solid #DCDCDC;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.page_tit li a:hover {
+  background: black;
+  color: white;
+  width: 25%;
+  display: table-cell;
+  vertical-align: middle;
+  border: 1px solid #DCDCDC;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.page_tit li a {
+  background: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  color: #999;
+}
+
+.content {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.pc_hidden {
+  display: none !important;
+}
+
+.nomem_order_lists_page>p {
+  margin-bottom: 60px;
+  line-height: 1.5;
+  color: #666;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.nomem_order_lists_page .form_area {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.form_area {
+  padding-bottom: 40px;
+  border-bottom: 1px solid #ddd;
+}
+
+.form_area>ul {
+  border-top: 2px solid #333;
+}
+
+.form_area>ul>li {
+  margin-top: 24px;
+}
+
+.form_area>ul>li .l_tit {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.form_area>ul>li .form_box::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+input[type='text'], input[type='password'], input[type='tel'], input[type='email'] {
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  padding: 0 14px;
+  border: 1px solid #999;
+  background-color: #fff;
+  font-size: 13px;
+  color: #333;
+  line-height: 50px;
+  border-radius: 0;
+  vertical-align: top;
+}
+
+#join_tel_01:nth-child(1) {
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+.form_area>ul>li.tel .form_box .ip_box, .form_area>ul>li.addr .form_box .ip_box {
+  overflow: hidden;
+}
+
+.form_area>ul>li.tel .form_box .ip_box input, .form_area>ul>li.addr .form_box .ip_box input {
+  width: calc( 100% -155px );
+  float: left;
+}
+
+.btn_txt {
+  display: block;
+  width: 100%;
+  height: 50px;
+  line-height: 46px;
+  border: 2px solid #333;
+  font-size: 13px;
+  text-align: center;
+}
+
+.form_area>ul>li.tel .form_box .ip_box button, .form_area>ul>li.addr .form_box .ip_box button {
+  float: left;
+  width: 100px;
+  margin-left: 5px;
+}
+
+.btn_txt.btn_dgray {
+  background: #666;
+  border: 2px solid #666;
+  margin-left: 5px;
+  color: white;
+}
+
+.form_area>ul>li.tel .form_box .ip_box.code {
+  width: 700px;
+  margin-top: 10px;
+}
+
+.form_area>ul>li.tel .form_box .ip_box.code input {
+  width: calc(100% - 176px);
+}
+
+.form_area>ul>li.tel .form_box .ip_box.code button {
+  width: 100px;
+}
+
+.btn_area {
+  margin-top: 100px;
+}
+
+.btn_txt.btn_gray {
+  background: #666;
+  border: 2px solid #666;
+  color: #fff;
+}
+
+.btn_txt.btn_beige {
+  background: #666;
+  border: 2px solid #666;
+  color: white;
+}
+
+.col {
+  margin: 10px 0;
+}
+
+.btn_txt.btn_beige {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.btn {
+  border-color: #fff;
+  background: black;
+  color: white;
+  margin-right: 70px;
+}
+
+.btn:hover {
+  border-color: black;
+  background: white;
+  color: black;
+}
+
+.container h3 {
+  margin: 50px 0;
+  color: #998465;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.card-text {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.bg {
+  background: black;
+}
+
+.d-block {
+  margin-top: 50px;
+}
+
+.col-12 {
+  margin: 0 120px;
+}
+
+.col-6 ul.list-unstyled li {
+  padding-bottom: 10px;
+}
+
+footer .wrap .bottom {
+  padding: 36px 0;
+}
+
+.wrap ul {
+  display: flex;
+  float: left;
+}
+
+.wrap ul li a {
+  color: white;
+  margin: 0 10px;
+}
+
+.btn-group {
+  float: right;
+}
+
+.dropdown-menu {
+  background-color: white;
+}
+
+.dropdown-menu a {
+  color: black;
+}
+
+.row .col-6 ul.list-unstyled li a {
+    color: #6c757d!important;
+}

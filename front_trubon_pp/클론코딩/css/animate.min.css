@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+ .animated {
+   animation-duration: 1s;
+   animation-delay: 0.1s;
+   visibility: visible;
+ }
+
+.fadeInLeft {
+  animation-name: fadeInLeft;
+}

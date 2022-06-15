@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+table {
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;  /* 두줄 없애기 */
+} tr, td {
+  border: 1px solid black;
+}
+
+tr:nth-child(1) {
+  font-weight: bold;
+  text-align: center;
+}

@@ -1,0 +1,166 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Carter+One&family=Monoton&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* 상단으로 이동 버튼 */
+#go-to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #f1f1f1;
+  border-radius: 100%;
+  overflow: hidden; /* a태그의 배경색이 라인(border) 지나서 넘치는 걸 막아줌 */
+}
+
+#go-to-top a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/go_to_top.png');
+  background-position: center center;
+  background-color: #ffffff;
+}
+
+/* 상단 헤더 영역 */
+#header {
+  position: fixed; /* 헤더 고정 */
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid #f1f1f1;
+  overflow: hidden;
+  padding: 0 15px;  /* 상하 0, 좌우 15px */
+  background-color: rgba(255, 255, 255, .75); /* 화이트에 투명도 설정 */
+}
+
+/* 상단 로고 영역 */
+#header #logo {
+  float: left;
+}
+#logo h1 a {
+  line-height: 60px;
+  font-weight: 100; /* 400(기본값), 700(bold) */
+  font-family: 'Monoton', cursive;
+  text-transform: uppercase;
+  /* 대소문자 지정 : uppercase(대문자), lowercase(소문자), capitalize(첫글자 대문자), initial(기본값으로), inherit(부모속성값 상속받음)*/
+}
+
+/* 상단 GNB 영역 */
+#header #gnb {
+  float: right;
+  margin-right: 30px;
+}
+#gnb ul {
+  overflow: hidden;
+}
+#gnb ul li {
+  float: left;
+  height: 60px;
+  margin-right: 10px;
+}
+
+/* #gnb ul li:nth-child(even) a{      => odd : 홀수 순서에 css 적용 (짝수는 even)
+  color: red;
+} */
+/* #gnb ul li:nth-child(2n) a{       => 배수 사용시  n사용 (2n은 2의 배수 / n은 1, 2, 3, 4...)
+  color: red;
+} */
+
+#gnb ul li:last-child {
+  margin-right: 0px;
+}
+#gnb ul li a {
+  line-height: 60px;
+}
+
+/* 메인 베너 영역 */
+#mainbanner {
+  /* height: 850px; */
+/*  height: calc(100vh - 61px);*/ /* 상단 gnb 높이 값 빼주면 메인베너가 화면 높이에 맞춰 사이즈가 정해짐 */
+  height: 100vh;
+  background-image: url('../img/main_banner_img.jpg');
+  background-position: center top;
+  background-size: cover; /* cover : 배경 요소 꽉 채울 수 있게 이미지 확대 또는 축소 */
+}
+
+/* 컨텐츠 영역 */
+#container {
+  width: 1200px;
+  min-height: 500px;
+  margin: 0 auto; /* 가운데 정렬 */
+}
+
+/* 공통 스타일 */
+#container h2 {
+  text-align: center;
+  color: #666666;
+  padding: 30px 0 15px; /* top: 30px, 좌우: 0, bottom: 15px*/
+  text-transform: uppercase;
+  border-bottom: 1px solid #f1f1f1;
+  margin-bottom: 15px;
+}
+#container section {
+  overflow: hidden;
+}
+#container section .items {
+  float: left;
+}
+#container section .items h3 {
+  padding: 10px 0; /* 상하 10px 좌우 0 */
+  border-bottom: 1px solid #f1f1f1;
+  margin-bottom: 10px;
+}
+#container section .items img {
+  width: 100%;
+}
+
+/* type-a */
+#container section.type-a .items {
+  /* width: calc(25% - 40px); box-sizing 속성을 사용하지 않을 때 */
+  width: 25%; /* box-sizing 속성 사용할 때의 width 값 */
+  min-height: 100px;
+  padding: 10px 20px; /* 상하 10px 좌우 20px */
+  box-sizing: border-box;
+  text-align: center;
+}
+#container section.type-a .items .bg-box {
+  height: 150px;
+  background-size: cover;
+}
+#container section.type-a .items:nth-child(4n+1) .bg-box{
+  background-image: url(../img/m_01.png);
+}
+#container section.type-a .items:nth-child(4n+2) .bg-box{
+  background-image: url(../img/m_02.png);
+}
+#container section.type-a .items:nth-child(4n+3) .bg-box{
+  background-image: url(../img/m_03.png);
+}
+#container section.type-a .items:nth-child(4n+4) .bg-box{
+  background-image: url(../img/m_04.png);
+}
+
+/* type-b */
+#container section.type-b .items {
+  width: 25%;
+  text-align: center;
+}
+#container section.type-b .items .box {
+  min-height: 100px;
+  padding: 10px;
+  margin: 0 10px 20px; /* top: 0, 좌우: 10px, bottom: 20px; */
+  border: 1px solid #f1f1f1;
+}
+
+/* 하단 영역 */
+#footer {
+  text-align: center;
+  border-top: 1px solid #f1f1f1;
+  padding:  20px 0; /* 푸터 내부 여백 : 상하 20px */
+  margin-top: 50px; /* footer 위 여백 : 50px */
+  background: #f9f9f9;
+}
+#footer .inner {
+  width: 1200px;
+  margin: 0 auto; /* 가운데 정렬 */
+}

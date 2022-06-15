@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+input[type="password"] {background: red;}
+.input-wrap input[name*="d"] {
+  background: blue;
+}
+
+.gnb {
+  background: #f1f1f1;
+}
+
+.gnb.yellow {
+  background: yellow;
+}
+
+.gnb.black {
+  background: black;
+}
+
+.gnb ul {
+  overflow: hidden;
+}
+
+.gnb ul li {
+  float: left;
+}
+
+.gnb ul li {
+  height: 30px;
+}
+
+.gnb ul li a {
+  line-height: 30px;
+  padding: 0 10px;
+}
+
+.gnb[class~=black] {
+  display: none;
+}
+
+.location div[class|="ko-lang"] {
+  color: blue;
+}
+
+.thumbnail ul {
+  width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.thumbnail ul li {
+  width: calc(25% - 20px);
+  margin: 0 10px;
+  float: left;
+}
+
+.thumbnail ul li span {
+  color: red;
+  font-weight: bold;
+}
+
+.thumbnail ul li a img {
+  width: 100%;
+}
+
+.thumbnail ul li:nth-child(2){
+  opacity: 0.5;  /*자식요소에 상송*/
+}
+
+.thumbnail ul li a[href^=https] img{
+  opacity: .5;
+}
+
+.thumbnail ul li a img[src$=png] {
+  border: 3px solid blue;
+  box-sizing: border-box;
+}

@@ -1,0 +1,64 @@
+@charset "UTF-8";
+html, body {
+  height: 100%;
+}
+
+body {
+  background: red;
+}
+
+#wrap {
+  /* display: flex; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#wrap:before {
+  content: 'red';
+  font-size: 2em; /* 부모요소(body)의 폰트사이즈(16px)의 기준으로 사이즈 지정 : 2배니까 32px */
+  color: white;
+}
+
+/* media query area */
+@media screen and ( max-width: 992px ) {  /* max-width 띄워쓰기 하면 안됨 */
+  body {
+    background: green;
+  }
+  #wrap:before {
+    content: 'green';
+  }
+}
+
+@media screen and ( max-width: 600px ){
+  body {
+    background: blue;
+    font-size: 14px;
+  }
+  #wrap:before {
+    content: 'blue';
+  }
+}
+
+@media screen and ( min-width: 320px ) and ( max-width: 450px ) {
+  body {
+    background: yellow;
+    font-size: 10px;
+  }
+  #wrap:before {
+    content: "yellow";
+    color: #666666;
+  }
+}
+
+@media screen and ( orientation: landscape ) {  /* orientation: landscape 가로모드 */
+  body {
+    background: black;
+  }
+}
+
+@media screen and ( orientation: portrait ) {  /* orientation: portrait 세로모드 */
+    body {
+      background: white;
+    }
+}

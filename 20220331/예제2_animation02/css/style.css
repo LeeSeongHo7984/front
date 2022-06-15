@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+.box {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  left: 0;
+  background: red;
+  animation-name: bgcolorchange;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bgcolorchange {
+  0% {
+    background: red;
+    left: 0; }
+    /* 50% { background: yellow;
+    left: 250px;
+  }  */
+  100% {
+    background: yellow;
+    left: 250px;
+  }
+}

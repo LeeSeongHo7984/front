@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>input form</title>
+  </head>
+  <body>
+    <header>
+      <h1>input form에 대하여 알아보자</h1>
+    </header>
+    <div id="container">
+      <form>
+        <input type="text" id="text1" name="text1" minlength="4" maxlength="8" size="10"><br>
+        <input type="radio" name="k"><span>여성</span>  <!-- name값은 같아야 함-->
+        <input type="radio" name="k"><span>남성</span><br>
+        <label for="ch1">check box label 사용방법</label><br>
+        <input type="checkbox" id="ch1" name="ch1"><br>
+        <input type="checkbox" id="ch2" name="ch2"><br>
+        <input type="search">  <!-- search는 옆에 x표시가 뜸-->
+        <input type="submit" value="전송">
+        <fieldset>
+          <legend>날짜 관련 입력 폼</legend>
+          <input type="date"><br>
+          <input type="month"><br>
+          <input type="week"><br>
+          <input type="datetime-local" min="2022-03-18T00:00" maxs="2022-12-30T00:00"><br>
+          <input type="time">
+        </fieldset>
+        <input type="color">
+        <input type="file">
+        <input type="number">
+        <input type="reset">
+        <input type="tel" name="phone" pattern="[0~9]{3}-[0~9]{4}-[0~9]{4}">
+      </form>
+    </div>
+  </body>
+</html>

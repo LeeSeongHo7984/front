@@ -1,0 +1,85 @@
+@charset "UTF-8";
+#header {
+  border-bottom: 1px solid #f1f1f1f1;
+  padding: 0 15px;
+  overflow: hidden;
+}
+
+#gnb {
+  float: right;
+}
+
+#gnb ul {
+  overflow: hidden;
+}
+
+#gnb ul li {
+  float: left;
+  height: 60px;
+  margin-right: 10px;
+}
+
+#gnb ul li:last-child {
+  margin-right : 0;
+}
+
+/* #gnb ul li:first-child {
+  margin-left : 50px;
+} */
+
+/* #gnb ul li:first-child a {
+  color: red;
+} */
+
+#gnb ul li a {
+  line-height: 60px;
+}
+
+#container {
+  width: 1200px;
+  margin: 0 auto;  /*첫번째 0은 top 혹시 0, 40이 있다면 첫번째는 top, 두번째는 bottom*/
+  min-height: 500px;
+}
+
+#container section {
+  overflow: hidden;
+}
+
+#container section .items {
+  float: left;
+  /* width: calc(25% - 82px); */
+  width: calc(25% - 10px);
+  /* width: 25%; */
+  height: 100px;
+  border: 1px solid #f1f1f1;
+  padding: 10px 20px;
+  margin-right: 10px;
+  /* padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px; */
+  box-sizing: border-box;
+}
+
+#container section .items:last-child {
+  margin-right: 0;
+}
+
+#container h2 {
+  text-align: center;
+  color: #666666;
+  padding: 30px 0 15px;
+  border-bottom: 1px solid #f1f1f1;
+  margin-bottom: 15px;
+  /* background: red; */
+}
+
+#footer {
+  text-align: center;
+  border-top: 1px solid #f1f1f1;
+}
+
+#footer .inner {
+  width : 1200px;
+  /* background: green; */
+}

@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-size : 50%; */
+  background-size: contain;
+  font-size: 70px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 0 15px black;
+}
+
+#txt {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+#txt p {
+  color: white;
+}

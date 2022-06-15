@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+html, body {
+  height: 100%;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  color: #666666;
+}
+
+select, input {
+  outline: none;
+  border: 1px solid #f1f1f1;
+  padding: 10px;
+}
+
+select {
+  margin: 5px 0;
+}
+
+input {
+  margin: 5px 0 5px 5px;  /* 순서 : 상 우 하 좌 */
+}

@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+html {
+  font-size: 16px;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.typing {
+  width: 21ch; /* px, %, em, rem, ch : 16px 0숫자 크기의 너비값 1ch */
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  /* font-size: 2em; */
+  font-family: monospace;
+  /* 2초동안 23번 나눠서 변화를 일이킨다 */
+  animation: typing 2s 2s steps(21) both, blink .5s step-end infinite alternate;
+}

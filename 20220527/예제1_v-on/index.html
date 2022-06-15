@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>vue.js v-for</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+  </head>
+  <body>
+    <div id="app">
+      <header id="header">
+        <ul id="menu">
+            <li v-for="list in menuList">
+              <a v-bind:href="list.ahref">{{list.menu}}</a>
+            </li>
+        </ul>
+      </header>
+      <main v-bind:class="{on:isActive}">
+        <div class="container">
+        </div>
+        <button id="banner-btn" v-on:click="toggleElem">{{bannerToggleText}}</button>
+      </main>
+      <footer id="footer">
+        <div class="inner">
+          <h3><a href="#">logo</a></h3>
+          <ul id="f-menu">
+            <li v-for="fList in fMenuList">
+              <a v-bind:href="fList.ahref">{{fList.fMenu}}</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      let app = new Vue({
+        el: "#app",
+        data: {
+          isActive: false,  /* 키값 쓰고 , 써야됨 */
+          // 실습 :
+          // 메인 배너 버튼 텍스트(bannerToggleText) 변수를 만들고
+          // document의 element(#banner-btn) 요소에 적용하시오.
+          // default : close
+          bannerToggleText: "open",
+          count: 0,
+          menuList: [
+            {menu: "company", ahref: "http://naver.com"},
+            {menu: "product", ahref: "http://kakao.com"},
+            {menu: "gallery", ahref: "http://daum.net"},
+            {menu: "location", ahref: "http://instagram.com"}
+          ],
+          fMenuList: [
+            {fMenu: "company", ahref: "http://naver.com"},
+            {fMenu: "product", ahref: "http://kakao.com"},
+            {fMenu: "gallery", ahref: "http://daum.net"},
+            {fMenu: "location", ahref: "http://instagram.com"},
+            {fMenu: "notice", ahref: "./community/notice.html"},
+            {fMenu: "faq", ahref: "./community/faq.html"}
+          ],
+          // 실습 :
+          // bgChange 배열을 생성하고 배경이미지의 경로값을 저장하는
+          // 객체를 생성하시오.
+          bgChange: [
+            {bg: "./img/main_banner01.jpg", title:"bg01"},
+            {bg: "./img/main_banner02.jpg", title:"bg02"},
+            {bg: "./img/main_banner03.jpg", title:"bg03"},
+            {bg: "./img/main_banner04.jpg", title:"bg04"},
+          ]
+        },
+        methods: {
+          toggleElem: function() {
+            console.log(event.currentTarget);
+            event.currentTarget.classList.toggle("on");
+            // console.log(`변경 전 : ${this.isActive}`);
+            this.isActive = !this.isActive;
+            // console.log(`변경 후 : ${this.isActive}`);
+            // 실습 :
+            // click 할 때 마다 "close", "open" 텍스트를 번갈서 노출시키시오.
+            // if ( this.isActive ) {
+            //   this.bannerToggleText = "open";
+            // } else {
+            //   this.bannerToggleText = "close";
+            // }
+
+            if( this.bannerToggleText == "close" ) {  // 베너가 열려있을 때
+              this.bannerToggleText = "open";
+              if ( this.count == this.bgChange.length - 1 ) {
+                this.count = 0;  // 변수 초기화
+              } else {
+                this.count++;
+              }
+            } else {  // 배너가 닫혀있을 때
+              this.bannerToggleText = "close";
+              console.log(this.count);
+              document.body.querySelector(".container").style.backgroundImage = `url("${this.bgChange[this.count].bg}")`;
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

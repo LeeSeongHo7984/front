@@ -1,0 +1,173 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Noto+Sans+KR:wght@100;300;400;700&display=swap');
+
+/* 상단으로 이동 버튼 */
+#go-to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #f1f1f1;
+  border-radius: 20px;  /*radius는 반지름 길이*/
+  overflow: hidden;
+}
+
+#go-to-top a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/go_to_top.png");
+  background-position: center center;
+  background-color: #ffffff;  /*white, rgba(255,255,255,1) 와 같다*/
+}
+
+/* 상단 헤더 영역 */
+#header {
+  border-bottom: 1px solid #f1f1f1;
+  overflow: hidden;
+  padding: 0 15px;
+}
+
+/* 상단로고 영역 */
+#header #logo {
+  float: left;
+}
+
+#logo h1 a {
+  line-height: 60px;
+  font-weight: 100;
+  font-family: 'Monoton', cursive;
+  text-transform: uppercase;  /*uppercase :대문자 표기, Lowercase : 소문자 표기 capitalize : 첫글자 대문자 표기*/
+}
+
+#header #gnb {
+  float: right;
+}
+
+#gnb ul {
+  overflow: hidden;
+}
+
+#gnb ul li {
+  float: left;
+  height: 60px;
+  margin-right: 10px;
+}
+
+/* #gnb ul li:nth-child(even) a {   odd : 홀수, even : 짝수
+    color: red;
+} */
+
+/* #gnb ul li:nth-child(2n) a {   odd : 홀수, even : 짝수
+    color: red;
+} */
+
+#gnb ul li:last-child {
+  margin-right: 0;
+}
+
+#gnb ul li a {
+  line-height: 60px;
+}
+
+/* 메인 베너 */
+#mainbanner {
+  height: 850px;
+  background-image: url("../img/main_banner_img.jpg");
+  background-position: center top;
+  background-size: cover;
+}
+
+#container {
+  width: 1200px;
+  min-height: 500px;
+  margin: 0 auto;
+}
+
+/* section 공통 스타일 */
+#container h2 {
+  text-align: center;
+  color: #666666;
+  padding: 30px 0 15px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #f1f1f1;
+  margin-bottom: 15px;
+}
+
+#container section {
+  overflow: hidden;
+}
+
+#container section .items {
+  float: left;
+}
+
+#container section .items h3{
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f1f1;
+  margin-bottom: 10px;
+}
+
+#container section .items img {
+  width: 100%;
+}
+
+/* type-a */
+#container section.type-a .items {
+  /* width: clac(25% - 20px); box-sizing 속성을 사용하지 않을 때 */
+  width: 25%;
+  min-height : 100px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#container section.type-a .items .bg-box {
+  height: 150px;
+  background-size: cover;
+}
+
+#container section.type-a .items:nth-child(4n+1) .bg-box{
+  background-image: url("../img/m_01.png");
+}
+
+#container section.type-a .items:nth-child(4n+2) .bg-box{
+  background-image: url("../img/m_02.png");
+}
+
+#container section.type-a .items:nth-child(4n+3) .bg-box{
+  background-image: url("../img/m_03.png");
+}
+
+#container section.type-a .items:nth-child(4n+4) .bg-box{
+  background-image: url("../img/m_04.png");
+}
+
+/* type-b */
+#container section.type-b .items {
+  width: 25%;
+  text-align: center;
+}
+
+#container section.type-b .items .box {
+  min-height: 100px;
+  padding: 10px;
+  margin: 0 10px 20px;
+  border: 1px solid #f1f1f1;
+}
+
+/* 하단 영역 */
+#footer {
+  text-align: center;
+  border-top: 1px solid #f1f1f1;;
+  padding: 20px 0;
+  margin-top: 50px;
+  background: #f9f9f9;
+}
+
+#footer .inner {
+  width: 1200px;
+  margin: 0 auto;
+}
