@@ -43,5 +43,7 @@ console.log(`원의 넓이는 ${result} 입니다.`);
 var stringVar = "string"; //문자열 타입 (string type)
 var numberVar = 12345; //숫자 타입 (number type)
 var booleanVar = true; // true, false 값을 반환하는 타입 (boolean type)
-var functionVar = function(){//실행코드}; //함수형 타입
+var functionVar = function(){
+  //실행코드
+}; //함수형 타입
 var objectVar = {//변수, 함수, string, 배열, 객체}  //객체형 타입
